@@ -215,21 +215,14 @@ for_window [class="VirtualBox Manager"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
 for_window [class="Oblogout"] fullscreen
 
-# Custom Application Rules
-
-
 # Custom bindings
 bindsym $mod+l exec betterlockscreen -l && echo mem > /sys/power/state
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+shift+d exec rofi -show run
 bindsym $mod+b exec librewolf
-bindsym $mod+shift+u exec remmina -c /home/user0/.local/share/remmina/group_rdp_aafw067-rhrk-uni-kl-de_aafw067-rhrk-uni-kl-de.remmina
-bindsym $mod+shift+l exec /home/user0/.config/i3/accel.sh
 
 # Applets
 exec_always ~/.config/polybar/launch.sh
-#exec_always killall volctl && volctl
-#exec_always killall nm-applet && nm-applet
 
 # Autostart
 exec setxkbmap -layout de
@@ -237,6 +230,3 @@ exec_always picom
 exec_always nitrogen --restore
 exec_always xrandr --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-0 --mode 1280x1024 --pos 1920x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off
 exec_always dunst
-exec_always sudo ntfs-3g /dev/nvme0n1p2 /mnt/firecuda
-
-#exec_always feh --bg-fill /home/user0/Bilder/wallpapers/anime-cyber-girl-neon-city-cr.jpg
