@@ -467,28 +467,6 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/notification-reddit]
-type = custom/script
-exec = ~/.config/polybar/notification-reddit.sh
-interval = 60
-
-[module/updates-pacman-aurhelper]
-type = custom/script
-exec = ~/.config/polybar/pacman-aurhelper.sh
-interval = 600
-
-[module/player-mpris-tail]
-type = custom/script
-exec = ~/.config/polybar/player-mpris-tail.py -f '{icon} {artist} - {title}' -b firefox
-tail = true
-click-left = ~/.config/polybar/player-mpris-tail.py previous &
-click-right = ~/.config/polybar/player-mpris-tail.py next &
-click-middle = ~/.config/polybar/player-mpris-tail.py play-pause &
-
-[module/matrix]
-type = custom/script
-exec = /home/user0/.config/polybar/matrix.sh
-
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
